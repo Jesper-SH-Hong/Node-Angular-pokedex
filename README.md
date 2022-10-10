@@ -8,9 +8,14 @@ Web Based Single Page Application of Pokemon
 NODE-ANGULAR-POKEDEX is built with Angular, Node JS, Express, MongoDB. Pulling live API data from pokeapi.co
 
 
+<br><br><br>
+
+
 Happy Thanksgiving!
 
-I've spent whole long weekends to somehow learn and utilize Angular framework just like Hackathon to show my passion for Jr. Front-end Developer position at RAZR
+I've spent whole long weekends to somehow learn and utilize Angular framework just like Hackathon 
+(to show my passion for Jr. Front-end Developer position at RAZR)
+
 I tried to combine the new angular knowledge with my backend knowledge in Node Express and MongoDB.
 
 
