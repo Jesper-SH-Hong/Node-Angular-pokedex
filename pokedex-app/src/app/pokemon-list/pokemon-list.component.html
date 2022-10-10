@@ -1,0 +1,28 @@
+<!-- Pokemon Grid -->
+<!-- creating markup. in the end, we'll combine all data and will be put it visible -->
+<div class="pokemon-grid">
+    <div class="box" *ngFor="let pokemon of pokemons">
+        <img [src]="pokemon.sprites.front_default" alt="Pokemon default image">
+                <!-- binding my src to pokemon -->
+
+        <h3>{{pokemon.name}}</h3>
+        <p>
+            <b>Type: </b> {{pokemon.types[0].type.name}}
+        </p>
+        <p>
+            <b>Height: </b> {{pokemon.height}}
+        </p>
+
+        <p>
+            <b>Health: </b> {{pokemon.stats[0].base_stat}}
+        </p>
+
+        <button (click)="addToCart(pokemon)">Add To Cart</button>
+
+
+    </div>
+
+
+</div>
+
+<!-- END of Pokemon -->

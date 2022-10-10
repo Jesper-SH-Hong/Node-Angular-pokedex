@@ -7,10 +7,14 @@ import { HttpClient } from '@angular/common/http';
 export class AppService {
 
   constructor(
-    private http: HttpClient
+    // private http: HttpClient
   ) { }
 
-  rootURL = '/api';
+  // rootURL = '/api';
+
+  // getCart(){
+  //   return this.http.get(this.rootURL + '/cart')
+  // }
   
 }
 

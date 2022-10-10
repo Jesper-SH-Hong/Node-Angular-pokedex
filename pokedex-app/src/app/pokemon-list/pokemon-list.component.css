@@ -1,0 +1,31 @@
+.pokemon-grid {
+    display:grid;
+    grid-gap: 16px;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(23%, 1fr));
+    /* repeat my columns to autofit. they'll auto-fit minax. basically the min width of those will be 23%, 1fr;  */
+    /* min 23% max auto. 1fraction per each = same proportion
+    100%/4 = 25%.. leave some extra spaces */
+}
+
+.pokemon-grid .box {
+    width:100%;
+    height: 300px;
+    box-shadow: 1px 2px 5px rgba(0,0,0, 0.3);  
+    /* opacity 0.3 */
+
+    line-height: 200%;
+    text-align: center;
+}
+
+.pokemon-grid .box img {
+    max-width: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+button {
+    width: 100px;
+    background-color: yellowgreen;
+    color: white;
+}
