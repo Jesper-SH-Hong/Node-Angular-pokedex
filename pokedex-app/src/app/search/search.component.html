@@ -1,7 +1,7 @@
 <form [formGroup] ="profileForm" (ngSubmit)="onSubmit()">
 
     <label for="poke-name">Pokemon Name: </label>
-    <input id="poke-name" type="text" formControlName="pokeName">
+    <input id="poke-name" type="text" formControlName="pokeName" placeholder="Enter Pokemon Name">
 <button type="submit" [disabled]="!profileForm.valid">Search</button>
   
   </form>

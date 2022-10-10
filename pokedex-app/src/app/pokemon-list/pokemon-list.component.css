@@ -1,4 +1,5 @@
 .pokemon-grid {
+    min-height: 120vh;
     display:grid;
     grid-gap: 16px;
     padding: 20px;
@@ -39,3 +40,9 @@ button {
 }
 
    
+form {
+    background-color: lightgreen;
+    text-align: center;
+    padding-bottom: 8px;
+
+}

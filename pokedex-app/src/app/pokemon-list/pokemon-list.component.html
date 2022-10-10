@@ -1,5 +1,14 @@
 <!-- Pokemon Grid -->
 <!-- creating markup. in the end, we'll combine all data and will be put it visible -->
+
+<form [formGroup] ="profileForm" (ngSubmit)="onSubmit()">
+
+    <label for="poke-name">Pokemon Name: </label>
+    <input id="poke-name" type="text" formControlName="pokeName" placeholder="Enter Pokemon Name">
+<button type="submit" [disabled]="!profileForm.valid">Search</button>
+  
+  </form>
+  
 <div class="pokemon-grid">
     <div class="box {{pokemon.types[0].type.name}}" *ngFor="let pokemon of pokemons">
         <img [src]="pokemon.sprites.front_default" alt="Pokemon default image">
