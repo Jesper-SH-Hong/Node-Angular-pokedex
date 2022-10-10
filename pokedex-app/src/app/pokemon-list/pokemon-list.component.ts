@@ -51,8 +51,7 @@ export class PokemonListComponent implements OnInit {
 
   addToCart(poke: any): void {
     this.cartService.addToCart(poke)
-    // this.http.post('/api/post/cart', "1")
-    // window.alert('Your Pokemon has been added!')
+    window.alert('Your Pokemon has been added!')
 
   }
 }
