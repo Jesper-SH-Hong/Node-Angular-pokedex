@@ -11,19 +11,31 @@ import { CartComponent } from './cart/cart.component';
 import {HttpClientModule} from '@angular/common/http';
 
 
+import { SearchComponent } from './search/search.component';
+
+import { ReactiveFormsModule } from '@angular/forms';
+// import { FormControl, FormGroup } from '@angular/forms';    idk why it makes error during compile..
+
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     PokemonListComponent,
-    CartComponent
+    CartComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
+    
+    ReactiveFormsModule,
     AppRoutingModule,
 
     //for HTTP RQ
     HttpClientModule,
+
+    //FormControl..compile_error...
+
 
     
   ],
