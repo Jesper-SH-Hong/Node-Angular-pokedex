@@ -1,11 +1,13 @@
 <!-- <p>cart works!</p> -->
 
 <div class='card-grid'>
+  
+  <h2>Total Price is: ${{totalPrice}}</h2>
   <h2>You have added these items! </h2>
   <br>
   <div class="cart-item" *ngFor="let item of items">
     <p>
-      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{item.pokeID}}.png"
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{item.pokeID}}.png"
         alt="PokeIMG" />
     </p>
     <p>Name: {{item.name}}</p>
@@ -13,9 +15,6 @@
     <p>Qty: {{item.qty}}</p>
   </div>
   <br>
-  <p>
-    Total Price is: ${{totalPrice}}
-  </p>
 </div>
 
 <!-- <div> {{items}} </div> -->

@@ -25,3 +25,8 @@
     border-radius: 80px;
     background-color: yellowgreen;
 }
+
+
+.cart-item img{
+    width: 90px;
+}
