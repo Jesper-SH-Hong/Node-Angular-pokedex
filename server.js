@@ -53,6 +53,7 @@ var conn_cart = mongoose.createConnection('mongodb://localhost:27017/cartDB');
 
 const cartModel = conn_cart.model('carts', new mongoose.Schema( //첫 변수는 콜렉션명
     {
+        'name': String,
         'pokeID': Number,
         'qty': Number,
         'price': Number
@@ -68,6 +69,7 @@ app.post('/api/post/cart', jsonParser, function (req, res) {
 
 
     cartModel.create({
+        'name': req.body.name,
         'pokeID': req.body.id,
         'qty': 1,
         'price': req.body.id

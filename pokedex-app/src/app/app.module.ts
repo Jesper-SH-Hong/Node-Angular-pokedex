@@ -10,18 +10,6 @@ import { CartComponent } from './cart/cart.component';
 //for HTTP rq
 import {HttpClientModule} from '@angular/common/http';
 
-//for routers
-import { Routes, RouterModule } from '@angular/router';
-
-
-
-
-
-// const appRoutes: Routes = [
-//   { path: '', component: PokemonListComponent},
-//   { path: '/cart', component: CartComponent},
-// ];
-
 
 @NgModule({
   declarations: [
@@ -36,10 +24,6 @@ import { Routes, RouterModule } from '@angular/router';
 
     //for HTTP RQ
     HttpClientModule,
-
-
-    //for routers
-    // RouterModule.forRoot(appRoutes)
 
     
   ],
