@@ -92,3 +92,15 @@ app.get('/api/get/cart', function(req, res) {
         res.json(data);  
     });
   })
+
+
+  app.get('/api/delete/cart', function(req, res) {
+    cartModel.deleteMany({}, function(err, data){
+        if (err){
+          console.log("Error " + err);
+        }else{
+          console.log("Data "+ data); 
+        }
+        res.json(data);  
+    });
+  })

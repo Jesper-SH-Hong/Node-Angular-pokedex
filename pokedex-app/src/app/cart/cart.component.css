@@ -30,3 +30,13 @@
 .cart-item img{
     width: 90px;
 }
+
+button {
+    margin-top: 10px;
+    height: 25px;
+    width: 200px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+}

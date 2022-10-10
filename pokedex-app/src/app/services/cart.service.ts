@@ -56,9 +56,17 @@ export class CartService {
 
 
   clearCart() {
-    this.items = [];
-    return this.items;
-  }
+      // this.items.push(pokemon);
+      console.log('카트에서 지워주라..');
+      this.http.get('/api/delete/cart').subscribe(
+        (res: any) => {
+          // console.log(res);
+        },
+        (err) => {
+          console.log(err);
+        }
+      );
+    }
 
   constructor(private http: HttpClient) {}
 }

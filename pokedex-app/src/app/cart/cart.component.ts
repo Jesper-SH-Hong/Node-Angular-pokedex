@@ -35,4 +35,13 @@ export class CartComponent implements OnInit {
     console.log(4);
   }
 
+
+
+  emptyCart(): void {
+    this.cartService.clearCart()
+    window.alert('Remove all the items in Cart')
+
+  }
+
+
 }

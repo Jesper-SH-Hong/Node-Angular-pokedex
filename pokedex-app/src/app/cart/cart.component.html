@@ -3,7 +3,9 @@
 <div class='card-grid'>
   
   <h2>Total Price is: ${{totalPrice}}</h2>
+  
   <h2>You have added these items! </h2>
+  <button (click)="emptyCart()">Empty Your Cart</button>
   <br>
   <div class="cart-item" *ngFor="let item of items">
     <p>
