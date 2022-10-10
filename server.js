@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port= 5000
+const port = 5000
 //port for node
 
 const cors = require('cors');
@@ -13,14 +13,21 @@ const bodyparser = require("body-parser");
 
 
 // fixing "413 Request Entity Too Large" errors for line37
-app.use(express.json({limit: "10mb", extended: true}))
-app.use(express.urlencoded({limit: "10mb", extended: true, parameterLimit: 50000}))
+app.use(express.json({
+    limit: "10mb",
+    extended: true
+}))
+app.use(express.urlencoded({
+    limit: "10mb",
+    extended: true,
+    parameterLimit: 50000
+}))
 
 
 var jsonParser = bodyparser.json();
 
 
-app.use(express.static(process.cwd()+"/pokedex-app/dist/pokedex-app/"));
+app.use(express.static(process.cwd() + "/pokedex-app/dist/pokedex-app/"));
 
 
 app.listen(port, function (err) {
@@ -30,7 +37,7 @@ app.listen(port, function (err) {
 
 app.get('/', function (req, res) {
     // res.send('GET request to ho!!mepage')
-    res.sendFile(process.cwd()+"/pokedex-app/dist/pokedex-app/index.html")
+    res.sendFile(process.cwd() + "/pokedex-app/dist/pokedex-app/index.html")
 })
 
 
@@ -46,10 +53,10 @@ var conn_cart = mongoose.createConnection('mongodb://localhost:27017/cartDB');
 
 const cartModel = conn_cart.model('carts', new mongoose.Schema( //첫 변수는 콜렉션명
     {
-      'pokeID': Number,
-      'qty': Number,
-      'price': Number
-  }));
+        'pokeID': Number,
+        'qty': Number,
+        'price': Number
+    }));
 
 
 
@@ -61,12 +68,25 @@ app.post('/api/post/cart', jsonParser, function (req, res) {
 
 
     cartModel.create({
-      'pokeID': req.body.id,
-      'qty': 1,
-      'price': req.body.id
-    }, function(err, data){  
-      console.log("cart Data"+ data)
-  
-    // res.send("cart insertion done")
+        'pokeID': req.body.id,
+        'qty': 1,
+        'price': req.body.id
+    }, function (err, data) {
+        console.log("cart Data created\n" + data)
+
+        // res.send("cart insertion done")
     })
+})
+
+
+
+app.get('/api/get/cart', function(req, res) {
+    cartModel.find({}, function(err, data){
+        if (err){
+          console.log("Error " + err);
+        }else{
+          console.log("Data "+ data); 
+        }
+        res.json(data);  
+    });
   })

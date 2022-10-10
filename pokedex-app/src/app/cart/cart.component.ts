@@ -11,19 +11,24 @@ import { CartService } from '../services/cart.service';
 export class CartComponent implements OnInit {
 
   //define items property to save cart item list
-  items = this.cartService.getItems();
+  // items = this.cartService.getItems();
+  items: any
 
   constructor(
     private cartService: CartService
   ) { }
 
-  ngOnInit(): void {
+
+
+
+  async ngOnInit(): Promise<void> {
     console.log('This is cart')
-    // this.cartService.getItems
-    // this.cartService.getCart()
-    // .subscribe((response: any) => {
-    //   console.log("카트 리스폰스다..")
-    // })
+    
+    await this.cartService.getItems().then(value => this.items = value);
+
+    console.log(3);
+    console.log(this.items)
+    console.log(4);
   }
 
 }

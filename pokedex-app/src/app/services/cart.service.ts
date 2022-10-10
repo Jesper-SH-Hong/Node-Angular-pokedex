@@ -1,12 +1,16 @@
 import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Data } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
-  items: any[] = [];
+  // items: any[] =[];
+  items: any
+
 
   addToCart(pokemon: string) {
     // this.items.push(pokemon);
@@ -19,13 +23,26 @@ export class CartService {
         console.log(err);
       }
     );
-
-
   }
 
-  getItems() {
-    return this.items;
+
+  async getItems() {
+    console.log("welcome to cart service getItems()")
+    //return await this.http.get<any[]>('/api/get/cart').toPromise() as Data;
+    return await this.http.get('/api/get/cart').toPromise();
+    /*  {
+        console.log(1);
+        console.log(res);
+        console.log(2);
+        this.items=res;
+
+        
+  
+       });
+    return this.items;*/
   }
+
+
 
   clearCart() {
     this.items = [];
