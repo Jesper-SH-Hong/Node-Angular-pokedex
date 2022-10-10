@@ -14,6 +14,8 @@ export class CartComponent implements OnInit {
   // items = this.cartService.getItems();
   items: any
 
+  totalPrice: any
+
   constructor(
     private cartService: CartService
   ) { }
@@ -25,6 +27,8 @@ export class CartComponent implements OnInit {
     console.log('This is cart')
     
     await this.cartService.getItems().then(value => this.items = value);
+
+    this.totalPrice = this.cartService.getTotalPrice(this.items)
 
     console.log(3);
     console.log(this.items)

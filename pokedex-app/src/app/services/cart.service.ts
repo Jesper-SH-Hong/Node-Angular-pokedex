@@ -43,6 +43,17 @@ export class CartService {
   }
 
 
+  getTotalPrice(items: { price: number; }[]): any {
+    let total = 0;
+    let jsonSize = Object.keys(items).length;
+    for (let i=0; i < jsonSize; i++){
+      total += items[i].price
+    }
+    return total;
+  };
+
+
+
 
   clearCart() {
     this.items = [];

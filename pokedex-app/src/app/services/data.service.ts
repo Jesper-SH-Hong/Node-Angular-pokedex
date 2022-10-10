@@ -16,7 +16,7 @@ export class DataService {
 
   //angular의 http client 내장 함수 get()
   getPokemons() {
-    return this.http.get(`https://pokeapi.co/api/v2/pokemon?limit=28`);
+    return this.http.get(`https://pokeapi.co/api/v2/pokemon?limit=50`);
   }
 
 
@@ -25,7 +25,6 @@ export class DataService {
   getMoreData(pokeName: string) {
     //$ecmascript placeholder.  pass the name(여기 arg) get dynamically from component
     return this.http.get(`https://pokeapi.co/api/v2/pokemon/${pokeName}`);
-
   }
 
 
