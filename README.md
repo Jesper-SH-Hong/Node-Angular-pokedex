@@ -1,6 +1,6 @@
 # Node-Angular-pokedex
 
-![Sample](https://github.com/Jesper-SH-Hong/Node-Angular-pokedex/blob/master/sample_img/main0.png)
+![Sample](https://github.com/Jesper-SH-Hong/Node-Angular-pokedex/blob/master/sample_img/main.png)
 ![Sample](https://github.com/Jesper-SH-Hong/Node-Angular-pokedex/blob/master/sample_img/search.png)
 ![Sample](https://github.com/Jesper-SH-Hong/Node-Angular-pokedex/blob/master/sample_img/cart.png)
 
