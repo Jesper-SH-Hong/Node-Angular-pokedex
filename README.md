@@ -10,13 +10,9 @@ NODE-ANGULAR-POKEDEX is built with Angular, Node JS, Express, MongoDB. Pulling l
 
 <br><br><br>
 
+I tried to learn and implement on Angular over the Thanksgiving weekend.
 
-Happy Thanksgiving!
-
-I spent  to somehow learn and utilize Angular framework just like Hackathon 
-
-I tried to combine the new angular knowledge with my backend knowledge in Node Express and MongoDB.
-
+Also, I tried to combine those newly acquired skills with my backend knowledge of Node Express and MongoDB.
 
 
 
