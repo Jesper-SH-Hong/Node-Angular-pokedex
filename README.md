@@ -13,29 +13,24 @@ NODE-ANGULAR-POKEDEX is built with Angular, Node JS, Express, MongoDB. Pulling l
 
 Happy Thanksgiving!
 
-I've spent whole weekends to somehow learn and utilize Angular framework just like Hackathon 
+I spent  to somehow learn and utilize Angular framework just like Hackathon 
 
 I tried to combine the new angular knowledge with my backend knowledge in Node Express and MongoDB.
 
 
 
 
-## What I've learnt(Still writing)
+## What I've learnt
+(working on it)
 
-Connect Angular App - Node - MongoDB
 
-app.module -> component.ts 
 
-Http request -> HttpClientModule ->  this.http.get('/api/.../....')
-
-[Roadblocks]
-Async Await - toPromise()
-reactiveformsmodule - Can t bind to 'formGroup' since it isn t a known property of 'form
 
 
 ## Future learning
-* Fundamental Knowledge about Angular
-I wish I could learn more about Angular such as various directives, ...(writing)
+(working on it)
+
+
 
 ## Built With
 * [Poke API](https://pokeapi.co/) - The Pokemon API
