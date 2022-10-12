@@ -3,13 +3,12 @@
 
 
 <!-- template-driven form(two-way data binding): simple form <=> Reactive forms: scalable, reusable, and testable. -->
-<form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="searchForm" (ngSubmit)="searchWithPokeName()">
 
   <label for="poke-name">Pokemon Name: </label>
   <input id="poke-name" type="text" formControlName="pokeName" placeholder="Enter Pokemon Name">
   <button type="submit" [disabled]="!searchForm.dirty">Search</button>
-  <!-- disabled checking valid (i.e: dirty) -->
-
+  <!-- Bind button disabled state to `dirty` property -->
 </form>
 
 

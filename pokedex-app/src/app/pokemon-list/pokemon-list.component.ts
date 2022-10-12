@@ -70,7 +70,7 @@ export class PokemonListComponent implements OnInit {
   }
 
 
-  onSubmit() {
+  searchWithPokeName() {
 
     // 현 pokemon-grid 내용 지우기..
     this.pokemons = [];
