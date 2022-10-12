@@ -11,17 +11,13 @@ export class DataService {
     private http: HttpClient
   ) { }
 
-  
-
-  //angular's http client method get()
   getPokemons() {
     return this.http.get(`https://pokeapi.co/api/v2/pokemon?limit=50`);
   }
 
 
-  //Get detailed data of that Pokemon
   getMoreData(pokeName: string) {
-    //$ecmascript placeholder.  pass the name(여기 arg) get dynamically from component
+    //pass the pokeName get dynamically from component using Ecmascript Template literals(placeholder)
     return this.http.get(`https://pokeapi.co/api/v2/pokemon/${pokeName}`);
   }
 

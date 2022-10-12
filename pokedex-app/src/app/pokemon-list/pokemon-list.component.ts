@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service';
 import { CartService } from '../services/cart.service';
-import {HttpClient} from '@angular/common/http';
 import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
@@ -23,20 +22,17 @@ export class PokemonListComponent implements OnInit {
     //injecting my services!
     private dataService: DataService,
     private cartService: CartService,
-    private http: HttpClient
   ) { }
 
   ngOnInit(): void {
     this.dataService.getPokemons()
     .subscribe((response: any) => {
       // console.log(response);
-
       response.results.forEach( (result: any) => {
         this.dataService.getMoreData(result.name)
         .subscribe((uniqResponse: any) => {    //uniqResponse. naming convention for forEach
           this.pokemons.push(uniqResponse);
           console.log(this.pokemons);
-
         })
       })
       //.subscribe
@@ -48,7 +44,6 @@ export class PokemonListComponent implements OnInit {
     this.cartService.addToCart(poke)
     window.alert('Your Pokemon has been added!')
   }
-
 
   searchWithPokeName() {
     this.pokemons = [];    
@@ -66,5 +61,6 @@ export class PokemonListComponent implements OnInit {
       })
     });
   }
+
 
 }
