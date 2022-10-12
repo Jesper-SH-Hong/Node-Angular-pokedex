@@ -14,7 +14,7 @@ app.use(bodyparser.urlencoded({
 }));
 var jsonParser = bodyparser.json();
 
-// fixing "413 Request Entity Too Large" errors for line39
+// fixing "413 Request Entity Too Large" errors for line37
 app.use(express.json({
     limit: "10mb",
     extended: true
@@ -34,7 +34,6 @@ app.listen(port, function (err) {
     if (err) console.log(err);
 })
 
-//default route
 app.get('/', function (req, res) {
     // res.send('GET request to my homepage')
     res.sendFile(process.cwd() + "/pokedex-app/dist/pokedex-app/index.html")
