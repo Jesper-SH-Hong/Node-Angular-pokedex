@@ -14,14 +14,13 @@ export class DataService {
 
   //now I can send HTTP RQ!
 
-  //angular의 http client 내장 함수 get()
+  //angular's http client method get()
   getPokemons() {
     return this.http.get(`https://pokeapi.co/api/v2/pokemon?limit=50`);
   }
 
 
-  //get more poke data
-
+  //Get more poke data
   getMoreData(pokeName: string) {
     //$ecmascript placeholder.  pass the name(여기 arg) get dynamically from component
     return this.http.get(`https://pokeapi.co/api/v2/pokemon/${pokeName}`);

@@ -28,11 +28,9 @@ export class PokemonListComponent implements OnInit {
   });
 
 
-  // @ViewChild("pokeGrid") private pokeGridContainer: ElementRef;
-
 
   constructor(
-    //inject myservice!
+    //injecting my services!
     private dataService: DataService,
     private cartService: CartService,
 

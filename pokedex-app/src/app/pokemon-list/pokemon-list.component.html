@@ -1,6 +1,8 @@
 <!-- Pokemon Grid -->
-<!-- creating markup. in the end, we'll combine all data and will be put it visible -->
+<!-- creating markup. in the end, It'll combine all data and will make them visible -->
 
+
+<!-- template-driven form(two-way data binding): simple form <=> Reactive forms: scalable, reusable, and testable. -->
 <form [formGroup] ="searchForm" (ngSubmit)="onSubmit()">
 
     <label for="poke-name">Pokemon Name: </label>
@@ -8,6 +10,8 @@
 <button type="submit" [disabled]="!searchForm.valid">Search</button>
   
   </form>
+
+  
   
 <div class="pokemon-grid">
     <div class="box {{pokemon.types[0].type.name}}" *ngFor="let pokemon of pokemons">

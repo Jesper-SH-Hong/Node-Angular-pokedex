@@ -7,13 +7,13 @@ import { HeaderComponent } from './header/header.component';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { CartComponent } from './cart/cart.component';
 
-//for HTTP rq
+//for HTTP RQ
 import {HttpClientModule} from '@angular/common/http';
 
 
 
 import { ReactiveFormsModule } from '@angular/forms';
-// import { FormControl, FormGroup } from '@angular/forms';    idk why it makes error during compile..
+// import { FormControl, FormGroup } from '@angular/forms';    Error during compile.. only need ReactiveFormsModule for Form.
 
 
 @NgModule({
