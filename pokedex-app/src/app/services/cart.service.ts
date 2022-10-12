@@ -23,17 +23,13 @@ export class CartService {
 
 
   async getItems() {
-    console.log("welcome to cart service getItems()")
-    //return await this.http.get<any[]>('/api/get/cart').toPromise() as Data;
+    console.log("CartService: Sending getItems() request to API")
     return await this.http.get('/api/get/cart').toPromise();
     /*  {
         console.log(1);
         console.log(res);
         console.log(2);
         this.items=res;
-
-        
-  
        });
     return this.items;*/
   }
@@ -52,7 +48,7 @@ export class CartService {
 
 
   clearCart() {
-      console.log('CartService: Sending delete RQ to API');
+      console.log('CartService: Sending clearCart() RQ to API');
       this.http.delete('/api/delete/cart').subscribe(
         (res: any) => {
           // console.log(res);
