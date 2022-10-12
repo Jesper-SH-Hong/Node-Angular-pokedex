@@ -1,7 +1,6 @@
 const express = require('express')
 const app = express()
 
-//port for my backendAPI(node)
 const port = 5000
 const cors = require('cors');
 const bodyparser = require("body-parser");
@@ -26,7 +25,6 @@ app.use(express.urlencoded({
     parameterLimit: 50000
 }))
 
-//dist folder for Angular build
 app.use(express.static(process.cwd() + "/pokedex-app/dist/pokedex-app/"));
 
 app.listen(port, function (err) {
@@ -35,7 +33,6 @@ app.listen(port, function (err) {
 })
 
 app.get('/', function (req, res) {
-    // res.send('GET request to my homepage')
     res.sendFile(process.cwd() + "/pokedex-app/dist/pokedex-app/index.html")
 })
 
@@ -47,7 +44,7 @@ const mongoose = require('mongoose');
 var conn_cart = mongoose.createConnection('mongodb://localhost:27017/cartDB');
 
 
-//create schema for collection 'carts'
+
 const cartModel = conn_cart.model('carts', new mongoose.Schema({
     'name': String,
     'pokeID': Number,
