@@ -42,10 +42,13 @@ app.get('/', function (req, res) {
 
 
 
+
+
 const mongoose = require('mongoose');
 var conn_cart = mongoose.createConnection('mongodb://localhost:27017/cartDB');
 
-//create MongoDB schema for collection 'carts'
+
+//create schema for collection 'carts'
 const cartModel = conn_cart.model('carts', new mongoose.Schema({
     'name': String,
     'pokeID': Number,
