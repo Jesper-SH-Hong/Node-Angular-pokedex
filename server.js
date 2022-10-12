@@ -1,7 +1,8 @@
 const express = require('express')
 const app = express()
 const port = 5000
-//port for node
+//port for my backendAPI(node)
+
 
 const cors = require('cors');
 app.use(cors());
