@@ -6,15 +6,12 @@
 
 Web Based Single Page Application POKEDEX-APP is built with Angular, Node JS, Express, MongoDB. Pulling live API data from pokeapi.co
 
+<br>
 
-<br><br>
-
-I tried to learn and implement on Angular over the Thanksgiving weekend.
-
-Also, I tried to combine those newly acquired skills with my backend knowledge of Node Express and MongoDB.
-
-It was one of most challenging experience since I tried to avoid using jQuery at all.<br>
-Also, I felt that the Angular has a steep learning curve.
+* I tried to learn and implement on Angular over the Thanksgiving weekend.
+* Also, I tried to combine those newly acquired skills with my backend knowledge of Node Express and MongoDB.
+* It was one of most challenging experience because I tried to avoid using jQuery at all<br>
+* Also, I felt that the Angular has a steep learning curve.
 
 
 ## What I've learnt
@@ -38,9 +35,9 @@ I hope to learn more about Typescript and Angular next time!
 
   
 such as:<br>
-**TypeScript data type**: I declared all the variable as 'any' for this time.<br>
-**Angular Observable & RxJS**: I utilized async/await, promise/then for this app.<br>
-**Angular Reactive forms**: I implemented template-driven form here.
+* **TypeScript data type**: I declared all the variable as 'any' for this time.<br>
+* **Angular Observable & RxJS**: I utilized async/await, promise/then for this app.<br>
+* **Angular Reactive forms**: I implemented template-driven form here.
 
 
 
