@@ -1,14 +1,11 @@
 .card-grid {
-  /*fully cover page */
+  /* 100 viewport height => fully cover page */
   min-height: 100vh;
   display: grid;
   padding: 20px;
   justify-content: center;
   justify-items: center;
-
-  /* between each purchase items */
   grid-gap: 10px;
-
   background-color: f1faee;
 }
 
@@ -18,14 +15,10 @@
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
   display: grid;
   align-content: center;
-
   text-align: center;
-
-
   border-radius: 80px;
   background-color: #f5ebe0;
 }
-
 
 .cart-item img {
   width: 90px;

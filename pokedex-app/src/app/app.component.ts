@@ -8,8 +8,3 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'pokedex-app';
 }
-
-
-
-
-//will call and get data from API 

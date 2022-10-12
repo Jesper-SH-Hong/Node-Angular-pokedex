@@ -1,9 +1,5 @@
 <!-- Pokemon Grid -->
 
-
-<!-- template-driven form: simple <=> Reactive forms: scalable/reusable/testable. -->
-<!-- formGroup [property binding]: bind searchForm to the HTML <form> tag -->
-<!-- formControlName attribute binds to the searchForm form control for pokeName in <input> fields -->
 <form [formGroup]="searchForm" (ngSubmit)="searchWithPokeName()">
   <label for="poke-name">Pokemon Name: </label>
   <input id="poke-name" type="text" formControlName="pokeName" placeholder="Enter Pokemon Name">

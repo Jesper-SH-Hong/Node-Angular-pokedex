@@ -17,17 +17,14 @@ export class CartComponent implements OnInit {
     private cartService: CartService
   ) { }
 
+
   async ngOnInit(): Promise<void> {
     console.log('This is cart')
-    
     await this.cartService.getItems().then(value => this.items = value);
-
     this.totalPrice = this.cartService.getTotalPrice(this.items)
-    console.log(3);
-    console.log(this.items)
-    console.log(4);
   }
 
+  
   emptyCart(): void {
     this.cartService.clearCart()
     window.alert('Remove all the items in Cart')

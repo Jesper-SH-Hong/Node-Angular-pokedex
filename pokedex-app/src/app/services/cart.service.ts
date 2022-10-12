@@ -8,6 +8,10 @@ export class CartService {
 
   items: any
 
+  constructor(
+    private http: HttpClient
+    ) { }
+
 
   addToCart(pokemon: string) {
     console.log('CartService: Sending addToCart Request to API');
@@ -25,13 +29,6 @@ export class CartService {
   async getItems() {
     console.log("CartService: Sending getItems() request to API")
     return await this.http.get('/api/get/cart').toPromise();
-    /*  {
-        console.log(1);
-        console.log(res);
-        console.log(2);
-        this.items=res;
-       });
-    return this.items;*/
   }
 
 
@@ -43,8 +40,6 @@ export class CartService {
     }
     return total;
   };
-
-
 
 
   clearCart() {
@@ -59,5 +54,4 @@ export class CartService {
       );
     }
 
-  constructor(private http: HttpClient) {}
 }
