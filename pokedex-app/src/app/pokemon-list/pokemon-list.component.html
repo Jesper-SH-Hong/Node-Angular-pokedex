@@ -1,22 +1,18 @@
 <!-- Pokemon Grid -->
-<!-- creating markup. in the end, It'll combine all data and will make them visible -->
 
 
-<!-- template-driven form(two-way data binding): simple form <=> Reactive forms: scalable, reusable, and testable. -->
+<!-- template-driven form: simple <=> Reactive forms: scalable/reusable/testable. -->
 <form [formGroup]="searchForm" (ngSubmit)="searchWithPokeName()">
-
   <label for="poke-name">Pokemon Name: </label>
   <input id="poke-name" type="text" formControlName="pokeName" placeholder="Enter Pokemon Name">
   <button type="submit" [disabled]="!searchForm.dirty">Search</button>
-  <!-- Bind button disabled state to `dirty` property -->
 </form>
-
 
 
 <div class="pokemon-grid">
   <div class="box {{pokemon.types[0].type.name}}" *ngFor="let pokemon of pokemons">
     <img [src]="pokemon.sprites.front_default" alt="Pokemon default image">
-    <!-- binding my src to pokemon -->
+    <!-- [property binding] -->
 
     <h3>{{pokemon.name}}</h3>
     <p>
