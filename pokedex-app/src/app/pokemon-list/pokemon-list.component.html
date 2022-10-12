@@ -7,7 +7,8 @@
 
   <label for="poke-name">Pokemon Name: </label>
   <input id="poke-name" type="text" formControlName="pokeName" placeholder="Enter Pokemon Name">
-  <button type="submit" [disabled]="!searchForm.valid">Search</button>
+  <button type="submit" [disabled]="!searchForm.dirty">Search</button>
+  <!-- disabled checking valid (i.e: dirty) -->
 
 </form>
 

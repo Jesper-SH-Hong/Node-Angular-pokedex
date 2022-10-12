@@ -48,7 +48,7 @@ export class PokemonListComponent implements OnInit {
 
       response.results.forEach( (result: any) => {
         this.dataService.getMoreData(result.name)
-        .subscribe((uniqResponse: any) => {    //uniqResponse.. naming convention for forEach
+        .subscribe((uniqResponse: any) => {    //uniqResponse. naming convention for forEach
           this.pokemons.push(uniqResponse);
           console.log(this.pokemons);
 
@@ -87,7 +87,7 @@ export class PokemonListComponent implements OnInit {
       response.results.forEach( (result: any) => {        
         if(result.name == this.searchForm.value.pokeName)
         this.dataService.getMoreData(result.name)
-        .subscribe((uniqResponse: any) => {    //uniqResponse.. naming convention for forEach
+        .subscribe((uniqResponse: any) => {
           this.pokemons.push(uniqResponse);
           console.log(this.pokemons);
 
