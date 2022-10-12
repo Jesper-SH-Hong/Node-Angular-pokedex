@@ -4,8 +4,7 @@
 <img src="https://github.com/Jesper-SH-Hong/Node-Angular-pokedex/blob/master/sample_img/search.png" width="800">
 <img src="https://github.com/Jesper-SH-Hong/Node-Angular-pokedex/blob/master/sample_img/cart.png" width="800">
 
-Web Based Single Page Application
-NODE-ANGULAR-POKEDEX is built with Angular, Node JS, Express, MongoDB. Pulling live API data from pokeapi.co
+Web Based Single Page Application POKEDEX-APP is built with Angular, Node JS, Express, MongoDB. Pulling live API data from pokeapi.co
 
 
 <br><br>
