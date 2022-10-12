@@ -1,11 +1,11 @@
 <!-- Pokemon Grid -->
 <!-- creating markup. in the end, we'll combine all data and will be put it visible -->
 
-<form [formGroup] ="profileForm" (ngSubmit)="onSubmit()">
+<form [formGroup] ="searchForm" (ngSubmit)="onSubmit()">
 
     <label for="poke-name">Pokemon Name: </label>
     <input id="poke-name" type="text" formControlName="pokeName" placeholder="Enter Pokemon Name">
-<button type="submit" [disabled]="!profileForm.valid">Search</button>
+<button type="submit" [disabled]="!searchForm.valid">Search</button>
   
   </form>
   

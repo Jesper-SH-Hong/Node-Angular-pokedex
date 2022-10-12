@@ -23,7 +23,7 @@ export class PokemonListComponent implements OnInit {
 
 
 
-  profileForm = new FormGroup({
+  searchForm = new FormGroup({
     pokeName: new FormControl(''),
   });
 
@@ -80,14 +80,14 @@ export class PokemonListComponent implements OnInit {
     
 
     // TODO: EventEmitter로 폼 내용 보내기
-    console.warn(this.profileForm.value.pokeName);
+    console.warn(this.searchForm.value.pokeName);
 
     this.dataService.getPokemons()
     .subscribe((response: any) => {    
 
 
       response.results.forEach( (result: any) => {        
-        if(result.name == this.profileForm.value.pokeName)
+        if(result.name == this.searchForm.value.pokeName)
         this.dataService.getMoreData(result.name)
         .subscribe((uniqResponse: any) => {    //uniqResponse.. naming convention for forEach
           this.pokemons.push(uniqResponse);
