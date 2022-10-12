@@ -8,13 +8,16 @@ const bodyparser = require("body-parser");
 
 app.use(cors());
 
-//to translate encoded data in HTTP request body
+
+
+
+//to translate encoded data and JSON data in HTTP request body
 app.use(bodyparser.urlencoded({
     extended: true
 }));
-
-//to translate JSON data in HTTP request body
 var jsonParser = bodyparser.json();
+
+
 
 
 // fixing "413 Request Entity Too Large" errors for line39
@@ -35,7 +38,6 @@ app.use(express.static(process.cwd() + "/pokedex-app/dist/pokedex-app/"));
 
 
 
-
 app.listen(port, function (err) {
     console.log("server listenig to 5000!")
     if (err) console.log(err);
@@ -44,7 +46,7 @@ app.listen(port, function (err) {
 
 //default route
 app.get('/', function (req, res) {
-    // res.send('GET request to ho!!mepage')
+    // res.send('GET request to my homepage')
     res.sendFile(process.cwd() + "/pokedex-app/dist/pokedex-app/index.html")
 })
 
@@ -67,7 +69,7 @@ const cartModel = conn_cart.model('carts', new mongoose.Schema(
 
 
 app.post('/api/post/cart', jsonParser, function (req, res) {
-    console.log("서버로 드디어 왔따")
+    console.log("SERVER: got a request to add item in cart")
     console.log(req.body.id)
 
 
@@ -77,9 +79,7 @@ app.post('/api/post/cart', jsonParser, function (req, res) {
         'qty': 1,
         'price': req.body.id
     }, function (err, data) {
-        console.log("cart Data created\n" + data)
-
-        // res.send("cart insertion done")
+        console.log("SERVER: cart Data created\n" + data)
     })
 })
 
@@ -88,9 +88,9 @@ app.post('/api/post/cart', jsonParser, function (req, res) {
 app.get('/api/get/cart', function(req, res) {
     cartModel.find({}, function(err, data){
         if (err){
-          console.log("Error " + err);
+          console.log("SERVER: Error " + err);
         }else{
-          console.log("Data "+ data); 
+          console.log("SERVER: Data "+ data); 
         }
         res.json(data);  
     });
@@ -100,9 +100,9 @@ app.get('/api/get/cart', function(req, res) {
   app.delete('/api/delete/cart', function(req, res) {
     cartModel.deleteMany({}, function(err, data){
         if (err){
-          console.log("Error " + err);
+          console.log("SERVER: Error " + err);
         }else{
-          console.log("Data "+ data); 
+          console.log("SERVER: Data "+ data); 
         }
         res.json(data);  
     });
