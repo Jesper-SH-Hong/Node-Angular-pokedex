@@ -11,7 +11,6 @@ Web Based Single Page Application POKEDEX-APP is built with Angular, Node JS, Ex
 * I tried to learn and implement on Angular over the Thanksgiving weekend.
 * Also, I tried to combine those newly acquired skills with my backend knowledge of Node Express and MongoDB.
 * It was one of most challenging experience because I tried to avoid using jQuery at all<br>
-* Also, I felt that the Angular has a steep learning curve.
 
 
 ## What I've learnt
@@ -24,7 +23,7 @@ Web Based Single Page Application POKEDEX-APP is built with Angular, Node JS, Ex
 * How to create template-driven form and bind FormControl
 * How to bind data between view template and typescript code
 * How to inject my service to the component.(Dependency Injection: pass it as a param of constructor)
-* How to add navigation with AppRoutingModule, RouterModule.forRoot(routes) and <router-outlet><br>
+* How to add navigation with AppRoutingModule, RouterModule.forRoot(routes) and 'router-outlet'<br>
   (The 'router-outlet' tells the router where to display routed views.)
 
 
