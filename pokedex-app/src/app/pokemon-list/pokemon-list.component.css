@@ -1,48 +1,48 @@
 .pokemon-grid {
-    min-height: 120vh;
-    display:grid;
-    grid-gap: 16px;
-    padding: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(19%, 1fr));
-    /* repeat my columns to autofit. they'll auto-fit minmax. basically the min width of those will be 19%, 1fr;  */
-    /* min 19% max auto. 1fraction per each = same proportion
+  min-height: 120vh;
+  display: grid;
+  grid-gap: 16px;
+  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(19%, 1fr));
+  /* repeat my columns to autofit. they'll auto-fit minmax. basically the min width of those will be 19%, 1fr;  */
+  /* min 19% max auto. 1fraction per each = same proportion
     100%/5 = 20%.. leave some extra spaces */
-    
+
 }
 
 .pokemon-grid .box {
-    width:100%;
-    height: 300px;
-    box-shadow: 1px 2px 5px rgba(0,0,0, 0.3);  
-    /* opacity 0.3 */
+  width: 100%;
+  height: 300px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+  /* opacity 0.3 */
 
-    line-height: 150%;
-    text-align: center;
-    border-radius: 200px;
-    background-color: #f5ebe0;
+  line-height: 150%;
+  text-align: center;
+  border-radius: 200px;
+  background-color: #f5ebe0;
 }
 
 .pokemon-grid .box img {
-    max-width: 100px;
-    display: block;
-    margin: 0 auto;
-    padding-top: 20px;
+  max-width: 100px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 20px;
 }
 
 button {
-    margin-top: 10px;
-    height: 25px;
-    width: 100px;
-    background-color: #e63946;
-    color: white;
-    border-radius: 10px;
-    font-weight: bold;
+  margin-top: 10px;
+  height: 25px;
+  width: 100px;
+  background-color: #e63946;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
 }
 
-   
+
 form {
-    background-color: #edede9;
-    text-align: center;
-    padding-bottom: 8px;
+  background-color: #edede9;
+  text-align: center;
+  padding-bottom: 8px;
 
 }

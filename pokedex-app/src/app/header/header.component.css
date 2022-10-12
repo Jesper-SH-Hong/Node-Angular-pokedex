@@ -1,22 +1,22 @@
 /* Header CSS */
 
 header {
-    padding: 20px 0px;
-    text-align: center;
-    background-color: #1d3557;
+  padding: 20px 0px;
+  text-align: center;
+  background-color: #1d3557;
 }
 
 header h1 {
-    color: white;
-    letter-spacing: 3px;
+  color: white;
+  letter-spacing: 3px;
 }
 
 
 p {
-    width:100px;
-    height: 30px;
-    background-color: white;
-    margin: auto;
-    padding-top: 10px;
-    border-radius: 20px;
+  width: 100px;
+  height: 30px;
+  background-color: white;
+  margin: auto;
+  padding-top: 10px;
+  border-radius: 20px;
 }

@@ -10,11 +10,8 @@ import { CartComponent } from './cart/cart.component';
 //for HTTP RQ
 import {HttpClientModule} from '@angular/common/http';
 
-
-
+//for Angular form
 import { ReactiveFormsModule } from '@angular/forms';
-// import { FormControl, FormGroup } from '@angular/forms';    Error during compile.. only need ReactiveFormsModule for Form.
-
 
 @NgModule({
   declarations: [
@@ -23,6 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     PokemonListComponent,
     CartComponent,
   ],
+
   imports: [
     BrowserModule,
     
@@ -30,14 +28,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
 
     //for HTTP RQ
-    HttpClientModule,
-
-    //FormControl..compile_error...
-
-
-    
+    HttpClientModule,  
   ],
+
   providers: [],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

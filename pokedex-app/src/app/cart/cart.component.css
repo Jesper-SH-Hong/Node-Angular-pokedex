@@ -1,42 +1,42 @@
 .card-grid {
-    /*fully cover page */
-    min-height: 100vh;
-    display:grid;
-    padding: 20px;
-    justify-content: center;
-    justify-items: center;
+  /*fully cover page */
+  min-height: 100vh;
+  display: grid;
+  padding: 20px;
+  justify-content: center;
+  justify-items: center;
 
-    /* between each purchase items */
-    grid-gap: 10px;
+  /* between each purchase items */
+  grid-gap: 10px;
 
-    background-color: f1faee;
+  background-color: f1faee;
 }
 
 .cart-item {
-    width:200px;
-    height: 200px;
-    box-shadow: 1px 2px 5px rgba(0,0,0,0.3);  
-    display: grid;
-    align-content: center;
+  width: 200px;
+  height: 200px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+  display: grid;
+  align-content: center;
 
-    text-align: center;
+  text-align: center;
 
-    
-    border-radius: 80px;
-    background-color: #f5ebe0;
+
+  border-radius: 80px;
+  background-color: #f5ebe0;
 }
 
 
-.cart-item img{
-    width: 90px;
+.cart-item img {
+  width: 90px;
 }
 
 button {
-    margin-top: 10px;
-    height: 25px;
-    width: 200px;
-    background-color: red;
-    color: white;
-    border-radius: 10px;
-    font-weight: bold;
+  margin-top: 10px;
+  height: 25px;
+  width: 200px;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
 }

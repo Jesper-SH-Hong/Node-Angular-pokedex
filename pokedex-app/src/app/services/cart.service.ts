@@ -8,13 +8,12 @@ import { Data } from '@angular/router';
   providedIn: 'root',
 })
 export class CartService {
-  // items: any[] =[];
+
   items: any
 
 
   addToCart(pokemon: string) {
-    // this.items.push(pokemon);
-    console.log('카트서비스에서 쏴본다..');
+    console.log('CartService: Sending addToCart Request to API');
     this.http.post('/api/post/cart', pokemon).subscribe(
       (res: any) => {
         // console.log(res);
@@ -56,8 +55,7 @@ export class CartService {
 
 
   clearCart() {
-      // this.items.push(pokemon);
-      console.log('카트에서 지워주라..');
+      console.log('CartService: Sending delete RQ to API');
       this.http.delete('/api/delete/cart').subscribe(
         (res: any) => {
           // console.log(res);

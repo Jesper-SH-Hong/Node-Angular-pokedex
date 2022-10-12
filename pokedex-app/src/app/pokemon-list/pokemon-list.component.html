@@ -3,40 +3,34 @@
 
 
 <!-- template-driven form(two-way data binding): simple form <=> Reactive forms: scalable, reusable, and testable. -->
-<form [formGroup] ="searchForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
 
-    <label for="poke-name">Pokemon Name: </label>
-    <input id="poke-name" type="text" formControlName="pokeName" placeholder="Enter Pokemon Name">
-<button type="submit" [disabled]="!searchForm.valid">Search</button>
-  
-  </form>
+  <label for="poke-name">Pokemon Name: </label>
+  <input id="poke-name" type="text" formControlName="pokeName" placeholder="Enter Pokemon Name">
+  <button type="submit" [disabled]="!searchForm.valid">Search</button>
 
-  
-  
+</form>
+
+
+
 <div class="pokemon-grid">
-    <div class="box {{pokemon.types[0].type.name}}" *ngFor="let pokemon of pokemons">
-        <img [src]="pokemon.sprites.front_default" alt="Pokemon default image">
-                <!-- binding my src to pokemon -->
+  <div class="box {{pokemon.types[0].type.name}}" *ngFor="let pokemon of pokemons">
+    <img [src]="pokemon.sprites.front_default" alt="Pokemon default image">
+    <!-- binding my src to pokemon -->
 
-        <h3>{{pokemon.name}}</h3>
-        <p>
-            <b>Type: </b> {{pokemon.types[0].type.name}}
-        </p>
-        <p>
-            <b>Height: </b> {{pokemon.height}}
-        </p>
+    <h3>{{pokemon.name}}</h3>
+    <p>
+      <b>Type: </b> {{pokemon.types[0].type.name}}
+    </p>
+    <p>
+      <b>Height: </b> {{pokemon.height}}
+    </p>
+    <p>
+      <b>Health: </b> {{pokemon.stats[0].base_stat}}
+    </p>
 
-        <p>
-            <b>Health: </b> {{pokemon.stats[0].base_stat}}
-        </p>
-
-        <button (click)="addToCart(pokemon)">Add To Cart</button>
-
-
-    </div>
-
-
-
+    <button (click)="addToCart(pokemon)">Add To Cart</button>
+  </div>
 </div>
 
 <!-- END of Pokemon -->

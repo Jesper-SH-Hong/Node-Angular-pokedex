@@ -5,14 +5,13 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class DataService { 
-  constructor(
-    
+
+  constructor(    
     //name: http, type: HttpClient
     private http: HttpClient
   ) { }
 
-
-  //now I can send HTTP RQ!
+  
 
   //angular's http client method get()
   getPokemons() {
@@ -20,7 +19,7 @@ export class DataService {
   }
 
 
-  //Get more poke data
+  //Get detailed data of that Pokemon
   getMoreData(pokeName: string) {
     //$ecmascript placeholder.  pass the name(여기 arg) get dynamically from component
     return this.http.get(`https://pokeapi.co/api/v2/pokemon/${pokeName}`);
