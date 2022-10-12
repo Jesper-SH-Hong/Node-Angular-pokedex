@@ -58,7 +58,7 @@ export class CartService {
   clearCart() {
       // this.items.push(pokemon);
       console.log('카트에서 지워주라..');
-      this.http.get('/api/delete/cart').subscribe(
+      this.http.delete('/api/delete/cart').subscribe(
         (res: any) => {
           // console.log(res);
         },

@@ -1,23 +1,28 @@
 const express = require('express')
 const app = express()
-const port = 5000
+
 //port for my backendAPI(node)
-
-
+const port = 5000
 const cors = require('cors');
+const bodyparser = require("body-parser");
+
 app.use(cors());
 
-const bodyparser = require("body-parser");
-// app.use(bodyparser.urlencoded({  //body parser 안에 어떤 데이터 타입을 넣으셨나요. 인코디드된거요 ㅇㅇ
-//     extended: true
-// }));
+//to translate encoded data in HTTP request body
+app.use(bodyparser.urlencoded({
+    extended: true
+}));
+
+//to translate JSON data in HTTP request body
+var jsonParser = bodyparser.json();
 
 
-// fixing "413 Request Entity Too Large" errors for line37
+// fixing "413 Request Entity Too Large" errors for line39
 app.use(express.json({
     limit: "10mb",
     extended: true
 }))
+
 app.use(express.urlencoded({
     limit: "10mb",
     extended: true,
@@ -25,10 +30,10 @@ app.use(express.urlencoded({
 }))
 
 
-var jsonParser = bodyparser.json();
-
-
+//dist folder for Angular build
 app.use(express.static(process.cwd() + "/pokedex-app/dist/pokedex-app/"));
+
+
 
 
 app.listen(port, function (err) {
@@ -36,6 +41,8 @@ app.listen(port, function (err) {
     if (err) console.log(err);
 })
 
+
+//default route
 app.get('/', function (req, res) {
     // res.send('GET request to ho!!mepage')
     res.sendFile(process.cwd() + "/pokedex-app/dist/pokedex-app/index.html")
@@ -44,15 +51,12 @@ app.get('/', function (req, res) {
 
 
 
-
-
 const mongoose = require('mongoose');
-
 var conn_cart = mongoose.createConnection('mongodb://localhost:27017/cartDB');
 
 
-
-const cartModel = conn_cart.model('carts', new mongoose.Schema( //첫 변수는 콜렉션명
+//create MongoDB schema for collection 'carts'
+const cartModel = conn_cart.model('carts', new mongoose.Schema(
     {
         'name': String,
         'pokeID': Number,
@@ -64,9 +68,7 @@ const cartModel = conn_cart.model('carts', new mongoose.Schema( //첫 변수는 
 
 app.post('/api/post/cart', jsonParser, function (req, res) {
     console.log("서버로 드디어 왔따")
-    // console.log(req.body)
     console.log(req.body.id)
-    // res.send("hi")
 
 
     cartModel.create({
@@ -95,7 +97,7 @@ app.get('/api/get/cart', function(req, res) {
   })
 
 
-  app.get('/api/delete/cart', function(req, res) {
+  app.delete('/api/delete/cart', function(req, res) {
     cartModel.deleteMany({}, function(err, data){
         if (err){
           console.log("Error " + err);
