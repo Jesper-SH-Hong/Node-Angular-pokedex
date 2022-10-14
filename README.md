@@ -36,7 +36,8 @@ I hope to learn more about Typescript and Angular next time!
 such as:<br>
 * **TypeScript data type**: I declared all the variable as 'any' for this time.<br>
 * **Angular Observable & RxJS**: I utilized async/await, promise/then for this app.<br>
-* **Angular Reactive forms**: I implemented template-driven form here.
+* **Angular Reactive forms**: I implemented template-driven form here.<br>
+* **Regex**
 
 
 
